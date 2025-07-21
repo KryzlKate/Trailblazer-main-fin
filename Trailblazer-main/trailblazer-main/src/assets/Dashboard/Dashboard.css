@@ -6,12 +6,10 @@
   width: 100%;
   font-family: "Montserrat";
   background: transparent;
-  /* padding-left: 300px; */ /* Removed: Sidebar will occupy its own space */
   overflow-x: hidden;
-  height: 100vh; /* Ensure container takes full viewport height */
+  height: 100vh; 
 }
 
-/* Similar containers for other pages, ensure they also use flex */
 .oh-container,
 .profile-container {
   display: flex;
@@ -22,17 +20,15 @@
   height: 100vh;
 }
 
-/* New wrapper for main content area (header + actual page content) */
 .main-content-wrapper {
-  flex: 1; /* Takes remaining width next to sidebar */
+  flex: 1; 
 
   flex-direction: column;
-  height: 100%; /* Full height of its parent flex container */
-  overflow-y: auto; /* Let main content sections handle their own scroll */
-  /* margin-left: 300px; */ /* Removed global margin - will be applied specifically for dashboard */
+  height: 100%; 
+  overflow-y: auto; 
+
 }
 
-/* Apply margin-left only to the dashboard's main content wrapper */
 .dashboard-container .main-content-wrapper {
   margin-left: calc(300px + 1rem);
   transition: margin-left 0.3s ease;
@@ -45,12 +41,9 @@
 .main-dashboard,
 .oh-main,
 .main-content {
-  /* .main-content is for ProfilePage */
-  flex: 1; /* Allows content to fill space below header */
-  overflow-y: auto; /* Enable scrolling for the content area itself */
-
+  flex: 1; 
+  overflow-y: auto; 
   padding-top: 0px;
-  /* padding-top will be adjusted if page-header is sticky, added below */
   width: 100%;
 }
 
@@ -119,19 +112,18 @@
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
   padding: 1.5rem;
   width: 100%;
-  margin-top: 3rem; /* Added top margin to make space for SVG */
+  margin-top: 3rem; 
   margin-bottom: 2rem;
-  position: relative; /* For absolute positioning of SVG */
-  overflow: visible; /* Allow SVG to go outside */
-  display: flex; /* To position text and SVG */
-  justify-content: space-between; /* Push text to left, SVG to right */
-  align-items: flex-start; /* Align items to the top */
+  position: relative; 
+  overflow: visible; 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: flex-start;
 }
 
 .welcome-card > div {
-  /* Target the text wrapper div */
-  flex-grow: 1; /* Allow text to take available space */
-  max-width: 65%; /* Ensure text stays on the left portion */
+  flex-grow: 1; 
+  max-width: 65%; 
   text-align: left;
 }
 
@@ -155,10 +147,10 @@
 
 .welcome-card-svg {
   position: absolute;
-  right: 80px; /* Adjust to position horizontally, extending out */
-  bottom: 0; /* Align bottom of SVG with bottom of card */
-  width: auto; /* Maintain aspect ratio */
-  height: 230px; /* Make it large */
+  right: 80px;
+  bottom: 0;
+  width: auto; 
+  height: 230px; 
   z-index: 10;
 }
 
@@ -215,32 +207,30 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: clamp(15px, 3vw, 30px); /* Keep original gap between items */
+  gap: clamp(15px, 3vw, 30px); 
   position: relative;
   width: 100%;
   margin-top: 2rem;
   padding: 0 10px;
 }
-
-/* Style the actual line elements */
 .line {
   display: block;
   width: calc(
     clamp(15px, 3vw, 30px) + clamp(70px, 14vw, 120px)
-  ); /* Line width = gap + circle diameter */
+  ); 
   height: clamp(12px, 2.5vw, 20px);
   background-color: #2f2785;
   align-self: center;
   border-radius: 10px;
   flex-shrink: 1;
-  margin-top: -3.5rem; /* Move lines higher for horizontal layout */
+  margin-top: -2rem; 
   margin-left: calc(
     -1 * clamp(70px, 14vw, 120px) / 2
-  ); /* Negative margin equal to half circle diameter for overlap */
+  ); 
   margin-right: calc(
     -1 * clamp(70px, 14vw, 120px) / 2
-  ); /* Negative margin equal to half circle diameter for overlap */
-  z-index: 0; /* Place lines behind circles */
+  );
+  z-index: 0; 
 }
 
 .step {
@@ -252,29 +242,35 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  z-index: 1; /* Place steps above lines */
+  z-index: 1; 
   min-width: clamp(80px, 15vw, 120px);
   max-width: 150px;
   flex-shrink: 0;
 }
 
+.step p {
+  margin: 8px 0 0;
+  white-space: nowrap;
+  text-align: center;
+}
+
 .icon-circle {
-  width: clamp(70px, 14vw, 120px); /* Bigger circles */
-  height: clamp(70px, 14vw, 120px); /* Bigger circles */
+  width: clamp(70px, 14vw, 120px); 
+  height: clamp(70px, 14vw, 120px); 
   border-radius: 50%;
-  border: 3px solid #2f2785; /* Slightly thicker border */
+  border: 3px solid #2f2785; 
   display: flex;
   align-items: center;
   justify-content: center;
   background: white;
-  margin: 0; /* Remove vertical margin to let flex gap handle it */
+  margin: 0; 
   position: relative;
-  z-index: 2; /* Ensure circles are above lines */
+  z-index: 2; 
 }
 
 .step-img {
-  width: clamp(40px, 8vw, 70px); /* Bigger icons */
-  height: clamp(40px, 8vw, 70px); /* Bigger icons */
+  width: clamp(40px, 8vw, 70px); 
+  height: clamp(40px, 8vw, 70px); 
   object-fit: contain;
   display: block;
   border-radius: 0;
@@ -302,7 +298,6 @@
   color: #2f2785;
 }
 
-/* Media Queries for Mobile Responsiveness */
 
 @media (max-width: 992px) {
   .progress-steps {

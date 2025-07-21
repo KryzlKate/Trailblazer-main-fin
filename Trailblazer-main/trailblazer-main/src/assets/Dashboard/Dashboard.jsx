@@ -24,16 +24,6 @@ const ORDER_STEPS = [
     image: OrderReceived,
   },
   {
-    status: ORDER_STATUS.PROCESSING,
-    label: "Order Processing",
-    image: OrderProcessing,
-  },
-  {
-    status: ORDER_STATUS.ON_THE_WAY,
-    label: "On the way",
-    image: Otw,
-  },
-  {
     status: ORDER_STATUS.DELIVERED,
     label: "Delivered!",
     image: Delivered,

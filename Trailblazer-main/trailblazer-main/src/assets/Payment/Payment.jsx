@@ -122,8 +122,8 @@ const handleReceiptUpload = (e) => {
     turnaround: getTurnaroundTime(),
 
     name: isDeliver
-      ? `${account.firstName || "Kryll"} ${account.lastName || "Castaneda"}`
-      : "Kryll Castaneda",
+      ? `${account.firstName || "Kryzl"} ${account.lastName || "Castaneda"}`
+      : "Kryzl Castaneda",
 
     phoneNumber: isDeliver
       ? account.phoneNumber || "09900112233"
