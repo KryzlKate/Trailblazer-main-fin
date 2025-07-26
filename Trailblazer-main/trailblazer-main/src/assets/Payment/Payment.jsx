@@ -7,7 +7,7 @@ import {
 } from "../../utils/stepsConfig";
 import BackButton from "../../components/BackButton/BackButton";
 import { orderManager, formatPrice } from "../../utils/dataManager";
-import sampleQR from "../../assets/sample_qr.jpg";
+import qr from "../../assets/qr.jpg";
 import { getFirestore, collection, doc, setDoc, serverTimestamp } from "firebase/firestore";
 import { getStorage, ref, uploadBytes } from "firebase/storage";
 import { getAuth } from "firebase/auth";
@@ -638,8 +638,8 @@ await setDoc(orderDocRef, {
   <p>Please scan the QR code or type the number for GCash Payment</p>
 
   <div className="pay-gcash-box">
-  <img src={sampleQR} alt="GCash QR" className="pay-qr-img" />
-  <p className="pay-number">09123456789 - Name Name</p>
+  <img src={qr} alt="GCash QR" className="pay-qr-img" />
+  <p className="pay-number">09054136939 - KR**L KA*E C.</p>
 </div>
 
   <div className="pay-upload-receipt">
